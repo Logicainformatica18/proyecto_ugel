@@ -1,0 +1,39 @@
+   @font-face {
+        font-family: "Kohinoor Bangla";
+        src: url("Kohinoor Bangla/KohinoorBangla-Bold.otf");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Kohinoor Bangla";
+        src: url("Kohinoor Bangla/KohinoorBangla-Medium.otf");
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Kohinoor Bangla";
+        src: url("Kohinoor Bangla/KohinoorBangla-Light.otf");
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Kohinoor Bangla";
+        src: url("Kohinoor Bangla/KohinoorBangla-Regular.otf");
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Kohinoor Bangla";
+        src: url("Kohinoor Bangla/KohinoorBangla-Semibold.otf");
+        font-weight: 600;
+        font-style: normal;
+    }
+
+body {
+    font-family: 'Kohinoor Bangla', sans-serif;
+    font-weight: 300; /* Utiliza la variante "Light" por defecto */
+}
