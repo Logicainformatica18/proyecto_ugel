@@ -92,30 +92,32 @@ function userEdit(id) {
             user.firstname.value = response.data["firstname"];
             user.lastname.value = response.data["lastname"];
             user.names.value = response.data["names"];
+            user.description.value = response.data["description"];
+            user.ruc.value = response.data["ruc"];
 
-            if(response.data["photo"]!=null){
+            // if(response.data["photo"]!=null){
 
-                user.fotografia.src ="imageusers/"+ response.data["photo"];
-            }
-            else{
-                user.fotografia.src ="https://via.placeholder.com/150";
-            }
+            //     user.fotografia.src ="imageusers/"+ response.data["photo"];
+            // }
+            // else{
+            //     user.fotografia.src ="https://via.placeholder.com/150";
+            // }
             user.email.value = response.data["email"];
             user.cellphone.value = response.data["cellphone"];
 
 
-            if (response.data["sex"]=="M") {
-                document.getElementById('M').checked=true;
-            }
-            else{
-                document.getElementById('F').checked=true;
-            }
-         var datebirth =  response.data["datebirth"];
-         user.month.value  = parseInt(datebirth.substr(5,2)) ;
-         user.day.value  = parseInt(datebirth.substr(8,2)) ;
-         user.year.value  = parseInt(datebirth.substr(0,4)) ;
+            // if (response.data["sex"]=="M") {
+            //     document.getElementById('M').checked=true;
+            // }
+            // else{
+            //     document.getElementById('F').checked=true;
+            // }
+        //  var datebirth =  response.data["datebirth"];
+        //  user.month.value  = parseInt(datebirth.substr(5,2)) ;
+        //  user.day.value  = parseInt(datebirth.substr(8,2)) ;
+        //  user.year.value  = parseInt(datebirth.substr(0,4)) ;
 
-         user.role.value=    response.data["roles_"][0]["name"];
+        //  user.role.value=    response.data["roles_"][0]["name"];
 
 
 

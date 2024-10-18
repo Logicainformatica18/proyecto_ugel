@@ -25,10 +25,7 @@
         Agregar
     </button>
     <p></p>
-    Buscar
-    <form name="for" id="show">
-        <input type="text" name="show" class="form-control" style="width: 50%" onkeydown="userShow();">
-    </form>
+
   <!-- /.content -->
   {{-- {{ $user->onEachSide(1)->links() }} --}}
     <p></p>
@@ -59,8 +56,10 @@
                         Nombres<input name="names" type="text" class="form-control">
                         Celular<input type="number" name="cellphone" class="form-control">
                         Email<input type="text" name="email" class="form-control">
-                        Contraseña<input type="password" name="password" class="form-control">
-                        Sexo
+                        Descripción<input type="text" name="description" class="form-control">
+                        Ruc<input type="number" name="ruc" class="form-control">
+                        {{-- Contraseña<input type="password" name="password" class="form-control"> --}}
+                        {{-- Sexo
                         <div class="container">
                             <div class="row ">
                                 <div class="col">
@@ -80,9 +79,9 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
-                        <br>
-                        Fecha de Nacimiento :
+                        </div> --}}
+                   
+                        {{-- Fecha de Nacimiento :
                         <div class="row">
                             <div class="col s4">
                                 <select name="day" class="form-control">
@@ -111,9 +110,9 @@
                                     ?>
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
                         <p></p>
-                        <div class="container align-content-center">
+                        {{-- <div class="container align-content-center">
                             <div class="form-group row">
                                 Fotografía
                                 <div class="col-sm-1"></div>
@@ -129,7 +128,7 @@
                                 <img id="blah" name="fotografia" src="https://via.placeholder.com/150" alt="Tu imagen"
                                     class="img-bordered" width="100%">
                             </div>
-                        </div>
+                        </div> --}}
 
 
 

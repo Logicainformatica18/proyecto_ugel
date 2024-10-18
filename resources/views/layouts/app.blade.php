@@ -183,7 +183,7 @@
 
 
 
-            <div class="container">
+            {{-- <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
                         <!-- Descripción a la izquierda -->
@@ -235,7 +235,7 @@
                 </div>
 
 
-            </div>
+            </div> --}}
 
         </footer>
     </div>

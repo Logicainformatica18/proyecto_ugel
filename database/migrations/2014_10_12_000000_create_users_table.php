@@ -15,12 +15,14 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string("dni",9)->nullable();
+            $table->string("ruc",length: 20)->nullable();
             $table->string("firstname");
             $table->string("lastname");
             $table->string("names");
-            $table->string("password");
+            $table->string("description")->nullable();
+            $table->string("password")->nullable();
             $table->date("datebirth")->nullable();
-            $table->string("cellphone",20);
+            $table->string("cellphone",20)->nullable();
             $table->longText("photo")->nullable();
             $table->string("sex",1)->nullable();
             $table->string('email',100)->unique();

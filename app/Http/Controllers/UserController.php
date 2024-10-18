@@ -57,16 +57,19 @@ class UserController extends Controller
             $user->firstname = $request->firstname;
             $user->lastname = $request->lastname;
             $user->names = $request->names;
-            $user->password =  Hash::make($request->password);
-            $user->datebirth = $request->datebirth;
+       //     $user->password =  Hash::make($request->password);
+      //      $user->datebirth = $request->datebirth;
             $user->cellphone = $request->cellphone;
+         
             //photo
-            if ($request->file('photo') != null) {
-                $request->photo = photoStore($request->file('photo'), "imageusers");
-                $user->photo = $request->photo;
-            }
+            // if ($request->file('photo') != null) {
+            //     $request->photo = photoStore($request->file('photo'), "imageusers");
+            //     $user->photo = $request->photo;
+            // }
             $user->email = $request->email;
             $user->sex = $request->sex;
+            $user->description = $request->description;
+            $user->ruc = $request->ruc;
             $user->save();
 
         } catch (\Exception $e) {
@@ -123,31 +126,31 @@ class UserController extends Controller
             $users->firstname = $request->firstname;
             $users->lastname = $request->lastname;
             $users->names = $request->names;
-            $users->datebirth = $request->datebirth;
+      //      $users->datebirth = $request->datebirth;
             $users->cellphone = $request->cellphone;
             $users->email = $request->email;
-            $users->sex = $request->sex;
-            // try {
-            //     $users->assignRole($request->role);
-            // } catch (\Exception $e) {
-            //     return $e->getMessage();
-            // }
+     //       $users->sex = $request->sex;
+    
+            $users->description = $request->description;
+            $users->ruc = $request->ruc;
 
             $users->save();
         } else {
             $table = User::find($request["id"]);
-            photoDestroy($table->photo, "imageusers");
-            $request->photo = photoStore($request->file('photo'), "imageusers");
+    //        photoDestroy($table->photo, "imageusers");
+     //       $request->photo = photoStore($request->file('photo'), "imageusers");
             $users = User::find($request->id);
             $users->dni = $request->dni;
             $users->firstname = $request->firstname;
             $users->lastname = $request->lastname;
             $users->names = $request->names;
-            $users->datebirth = $request->datebirth;
+     //       $users->datebirth = $request->datebirth;
             $users->cellphone = $request->cellphone;
             $users->email = $request->email;
-            $users->sex = $request->sex;
-            $users->photo = $request->photo;
+    //       $users->sex = $request->sex;
+    //        $users->photo = $request->photo;
+            $users->description = $request->description;
+            $users->ruc = $request->ruc;
             $users->save();
         }
         return   $this->create();
