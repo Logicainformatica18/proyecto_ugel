@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AnthonyCode</title>
+    <title>Ugel</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/jpg" href="{{ asset('dist/img/favicon.png') }}" />
@@ -101,7 +101,7 @@
 
 
                             <div class="login-logo">
-                                {{-- <img src="{{ asset('logo_anthonycode.png') }}" alt="" srcset=""width="30%"> --}}
+                                {{-- <img src="{{ asset('logo_Ugel.png') }}" alt="" srcset=""width="30%"> --}}
 
                                 <h1 style="font-weight: bold;font-size:50px; color: #042d89;"><b>Ugel</b>
                                 </h1>

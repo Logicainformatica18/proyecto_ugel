@@ -7,13 +7,13 @@
                                 <div class="container-fluid">
                                     <div class="row mb-2">
                                         <div class="col-sm-6">
-                                            <h1>Horarios</h1>
+                                            <h1>Pagos</h1>
                                             {{ session('success') }}
                                         </div>
                                         <div class="col-sm-6">
                                             <ol class="breadcrumb float-sm-right">
                                                 <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                                                <li class="breadcrumb-item active">Horarios</li>
+                                                <li class="breadcrumb-item active">Pagos</li>
                                             </ol>
                                         </div>
                                     </div>
@@ -21,20 +21,16 @@
                             </section>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal" onclick="New();$('#schedule')[0].reset();">
+                                data-target="#exampleModal" onclick="New();$('#pay')[0].reset();">
                                 Agregar
                             </button>
                             <p></p>
-                            Buscar
-                            <form  name="for"id="show">
-                                <input type="text"name="show" class="form-control" style="width: 50%"  onkeydown="scheduleShow();">
-                            </form>
-
+                          
                             <p></p>
                              <!-- /.content -->
-                             {{-- {{ $type->onEachSide(5)->links() }} --}}
+                             {{-- {{ $pay->onEachSide(5)->links() }} --}}
                             <div id="mycontent">
-                                @include("scheduletable")
+                                @include("paytable")
                             </div>
 
 
@@ -50,23 +46,23 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="" method="post" role="form" id="schedule" name="schedule">
+                                            <form action="" method="post" role="form" id="pay" name="form">
                                                 <input type="hidden" name="id" id="id">
                                                 {{ csrf_field() }}
                                           Descripción :      <input type="text" name="description" id="description"
                                                     class="form-control">
+
                                                     Detalle :      <input type="text" name="detail" id="detail"
                                                     class="form-control">
-
 
                                         </div>
                                         <div class="modal-footer">
                                             <input type="button" value="Nuevo" class="btn btn-warning"
-                                                onclick="New();$('#schedule')[0].reset();" name="new">
+                                                onclick="New();$('#pay')[0].reset();" name="new">
                                             <input type="button" value="Guardar" class="btn btn-success"id="create"
-                                                onclick="scheduleStore()" name="create">
+                                                onclick="payStore()" name="create">
                                             <input type="button" value="Modificar" class="btn btn-danger"id="update"
-                                                onclick="scheduleUpdate();" name="update">
+                                                onclick="payUpdate();" name="update">
                                             <button type="button" class="btn btn-secondary"
                                                 data-dismiss="modal">Cerrar</button>
                                             </form>

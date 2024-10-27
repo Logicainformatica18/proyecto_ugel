@@ -18,7 +18,7 @@ class ResetPassword extends ResetPasswordNotification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject(Lang::get('AnthonyCode Encuestas: Solicitud de restablecimiento de contraseña'))
+            ->subject(Lang::get('Ugel Encuestas: Solicitud de restablecimiento de contraseña'))
             ->line(Lang::get('Hola, Con la finalidad de que pueda visualizar los certificados alcanzados en los programas de especialización, se solicitó un restablecimiento de contraseña para tu cuenta ' . $notifiable->getEmailForPasswordReset() . ', haz clic en el botón que aparece a continuación para cambiar tu contraseña.'))
             ->action(Lang::get('Cambiar contraseña'), url(config('app.url') . route('password.reset', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()], false)))
             ->line(Lang::get('Si tu no realizaste la solicitud de cambio de contraseña, solo ignora este mensaje. '))

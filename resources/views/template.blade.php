@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AnthonyCode</title>
+    <title>Ugel</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -37,17 +37,8 @@
     <script src="{{ asset('role.js') }}"></script>
     <script src="{{ asset('type.js') }}"></script>
 
-    <script src="{{ asset('survey.js') }}"></script>
-    <script src="{{ asset('survey_detail.js') }}"></script>
-    <script src="{{ asset('selection.js') }}"></script>
-    <script src="{{ asset('selection_detail.js') }}"></script>
 
-    <script src="{{ asset('schedule.js') }}"></script>
-    <script src="{{ asset('registry.js') }}"></script>
-    <script src="{{ asset('certification.js') }}"></script>
 
-    <script src="{{ asset('registry_detail.js') }}"></script>
-    <script src="{{ asset('course.js') }}"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- jQuery -->
@@ -139,7 +130,7 @@
             <a href="" class="brand-link">
                
                 <span class="brand-text font-weight-light center">
-  <img src="{{ asset('logo_anthonycode.png')}}" alt="AdminLTE Logo" class="" width="200px"                 style="">
+  <img src="{{ asset('logo_Ugel.png')}}" alt="AdminLTE Logo" class="" width="200px"                 style="">
                 </span>
                 <p></p>
             </a>
@@ -403,41 +394,29 @@
                                             <p>USUARIOS</p>
                                         </a>
                                     </li>
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('categorias.index') }}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Categorías</p>
-                                        </a>
-                                    </li> --}}
-
-
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('tipos.index') }}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Tipos</p>
-                                        </a>
-                                    </li> --}}
+                                  
                                     <li class="nav-item">
-                                        <a href="{{ route('encuestas.index') }}" class="nav-link">
+                                        <a href="{{ route('tipos.index') }}" class="nav-link">
                                             {{-- <i class="far fa-circle nav-icon"></i> --}}
                                                <img src="{{ asset('formularioss.png') }}" alt="" srcset=""
                                                 width="30px">
-                                            <p>ENCUESTAS</p>
+                                            <p>Tipos</p>
                                         </a>
                                     </li>
-                                     <li class="nav-item">
-                                        <a href="{{ route('seleccion.index') }}" class="nav-link">
-                                            {{-- <i class="far fa-circle nav-icon"></i> --}}
-                                               <img src="{{ asset('listas.png') }}" alt="" srcset=""
-                                                width="30px">
-                                            <p>LISTAS</p>
-                                        </a>
-                                    </li>
-                                @elseif('Encuestador')
                                     <li class="nav-item">
-                                        <a href="{{ route('Mis-certificados.index') }}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Mis Certificados</p>
+                                        <a href="{{ route('categorias.index') }}" class="nav-link">
+                                            {{-- <i class="far fa-circle nav-icon"></i> --}}
+                                               <img src="{{ asset('formularioss.png') }}" alt="" srcset=""
+                                                width="30px">
+                                            <p>Categorías</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('pagos.index') }}" class="nav-link">
+                                            {{-- <i class="far fa-circle nav-icon"></i> --}}
+                                               <img src="{{ asset('formularioss.png') }}" alt="" srcset=""
+                                                width="30px">
+                                            <p>Pagos</p>
                                         </a>
                                     </li>
                                 @endrole
@@ -784,7 +763,7 @@
            <footer class="main-footer">
                 <span
                     style="background-image: linear-gradient(45deg, rgb(255, 0, 149), red); -webkit-background-clip: text; color: transparent;">
-                  <a href="https://anthonycode.com"target="_blank">Copyright © 2023 Dev. AnthonyCode</a></span>
+                  <a href="https://Ugel.com"target="_blank">Copyright © 2023 Dev. Ugel</a></span>
                 <div class="float-right d-none d-sm-inline-block">
                 </div>
             </footer>

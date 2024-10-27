@@ -33,53 +33,11 @@ Route::get('encuesta/{survey_id}',[App\Http\Controllers\SurveyClientController::
 
 
 
-   Route::resource("Encuestas_respuestas", App\Http\Controllers\CategoryController::class);
-   Route::post('survey_clientStore',[App\Http\Controllers\SurveyClientController::class, 'store']);
-   Route::post('survey_clientEdit',[App\Http\Controllers\SurveyClientController::class, 'edit']);
-   Route::post('survey_clientUpdate',[App\Http\Controllers\SurveyClientController::class, 'update']);
-   Route::post('survey_clientDestroy',[App\Http\Controllers\SurveyClientController::class, 'destroy']);
-   Route::post('survey_clientShow',[App\Http\Controllers\SurveyClientController::class, 'show']);
-
-   Route::post('clientStore',[App\Http\Controllers\ClientController::class, 'store']);
-
-
-
-
-   Route::resource("seleccion", App\Http\Controllers\SelectionController::class);
-   Route::post('selectionStore',[App\Http\Controllers\SelectionController::class, 'store']);
-   Route::post('selectionEdit',[App\Http\Controllers\SelectionController::class, 'edit']);
-   Route::post('selectionUpdate',[App\Http\Controllers\SelectionController::class, 'update']);
-   Route::post('selectionDestroy',[App\Http\Controllers\SelectionController::class, 'destroy']);
-
-
-//Route::resource("seleccion", App\Http\Controllers\SelectionController::class);
-   Route::post('selection_detailStore',[App\Http\Controllers\SelectionDetailController::class, 'store']);
-   Route::post('selection_detailEdit',[App\Http\Controllers\SelectionDetailController::class, 'edit']);
-   Route::post('selection_detailUpdate',[App\Http\Controllers\SelectionDetailController::class, 'update']);
-   Route::post('selection_detailDestroy',[App\Http\Controllers\SelectionDetailController::class, 'destroy']);
 
 
 
 
 
-
-   Route::post('associateShow',[App\Http\Controllers\surveyClientController::class, 'associate_show']);
-
-
-
-Route::resource('Estudiante', App\Http\Controllers\StudentController::class);
-
-
-
-
-
-
-
-
-
-
-Route::resource('Mis-certificados', App\Http\Controllers\CertificationStudentController::class);
- Route::resource('Docente', App\Http\Controllers\TeacherController::class);
 
 
 Route::get('/Administrador', [App\Http\Controllers\HomeController::class, 'sistema'])->name('sistema');
@@ -87,22 +45,13 @@ Route::get('/Administrador', [App\Http\Controllers\HomeController::class, 'siste
 
 Route::group(['middleware' => ['role:Administrador']], function () {
 
-       Route::post('reportDestroy',[App\Http\Controllers\ReportController::class, 'destroy']);
-        Route::post('reportEdit',[App\Http\Controllers\ReportController::class, 'edit']);
-
-        Route::post('reportUpdate',[App\Http\Controllers\ReportController::class, 'update']);
-    //
-   Route::resource("categorias", App\Http\Controllers\CategoryController::class);
+    Route::resource('categorias', App\Http\Controllers\CategoryController::class);
    Route::post('categoryStore',[App\Http\Controllers\CategoryController::class, 'store']);
    Route::post('categoryEdit',[App\Http\Controllers\CategoryController::class, 'edit']);
    Route::post('categoryUpdate',[App\Http\Controllers\CategoryController::class, 'update']);
    Route::post('categoryDestroy',[App\Http\Controllers\CategoryController::class, 'destroy']);
    Route::post('categoryShow',[App\Http\Controllers\CategoryController::class, 'show']);
 
-
-   Route::post('category_productDestroy',"ProductController@category_productDestroy");
-   Route::post('category_productStore',"ProductController@category_productStore");
-   Route::post('category_productEdit',"ProductController@category_productEdit");
 
 
 
@@ -140,89 +89,18 @@ Route::group(['middleware' => ['role:Administrador']], function () {
    Route::post('typeEdit',[App\Http\Controllers\TypeController::class, 'edit']);
    Route::post('typeUpdate',[App\Http\Controllers\TypeController::class, 'update']);
    Route::post('typeDestroy',[App\Http\Controllers\TypeController::class, 'destroy']);
-   Route::post('typeShow',[App\Http\Controllers\TypeController::class, 'show']);
 
 
-  Route::resource("encuestas", App\Http\Controllers\SurveyController::class);
-   Route::post('surveyStore',[App\Http\Controllers\SurveyController::class, 'store']);
-   Route::post('surveyEdit',[App\Http\Controllers\SurveyController::class, 'edit']);
-   Route::post('surveyUpdate',[App\Http\Controllers\SurveyController::class, 'update']);
-   Route::post('surveyDestroy',[App\Http\Controllers\SurveyController::class, 'destroy']);
-   Route::post('surveyShow',[App\Http\Controllers\SurveyController::class, 'show']);
-
-
-   Route::post('survey_detail',[App\Http\Controllers\SurveyController::class, 'survey_detail']);
-
-   Route::resource("encuestas_mantenimiento", App\Http\Controllers\SurveyDetailController::class);
- Route::post('survey_detailStore',[App\Http\Controllers\SurveyDetailController::class, 'store']);
-
-   Route::post('survey_detailStore',[App\Http\Controllers\SurveyDetailController::class, 'store']);
-   Route::post('survey_detailEdit',[App\Http\Controllers\SurveyDetailController::class, 'edit']);
-   Route::post('survey_detailUpdate',[App\Http\Controllers\SurveyDetailController::class, 'update']);
-   Route::post('survey_detailDestroy',[App\Http\Controllers\SurveyDetailController::class, 'destroy']);
+   Route::resource("pagos", App\Http\Controllers\PayController::class);
+   Route::post('payStore',[App\Http\Controllers\PayController::class, 'store']);
+   Route::post('payEdit',[App\Http\Controllers\PayController::class, 'edit']);
+   Route::post('payUpdate',[App\Http\Controllers\PayController::class, 'update']);
+   Route::post('payDestroy',[App\Http\Controllers\PayController::class, 'destroy']);
 
 
 
 
 
-   Route::resource("cursos", App\Http\Controllers\CourseController::class);
-   Route::post('courseStore',[App\Http\Controllers\CourseController::class, 'store']);
-   Route::post('courseEdit',[App\Http\Controllers\CourseController::class, 'edit']);
-   Route::post('courseUpdate',[App\Http\Controllers\CourseController::class, 'update']);
-   Route::post('courseDestroy',[App\Http\Controllers\CourseController::class, 'destroy']);
-   Route::post('courseShow',[App\Http\Controllers\CourseController::class, 'show']);
-
-   Route::resource("horarios", App\Http\Controllers\ScheduleController::class);
-   Route::post('scheduleStore',[App\Http\Controllers\ScheduleController::class, 'store']);
-   Route::post('scheduleEdit',[App\Http\Controllers\ScheduleController::class, 'edit']);
-   Route::post('scheduleUpdate',[App\Http\Controllers\ScheduleController::class, 'update']);
-   Route::post('scheduleDestroy',[App\Http\Controllers\ScheduleController::class, 'destroy']);
-   Route::post('scheduleShow',[App\Http\Controllers\ScheduleController::class, 'show']);
-
-   Route::resource("registros", App\Http\Controllers\RegistryController::class);
-   Route::post('registryStore',[App\Http\Controllers\RegistryController::class, 'store']);
-   Route::post('registryEdit',[App\Http\Controllers\RegistryController::class, 'edit']);
-   Route::post('registryUpdate',[App\Http\Controllers\RegistryController::class, 'update']);
-   Route::post('registryDestroy',[App\Http\Controllers\RegistryController::class, 'destroy']);
-   Route::post('registryShow',[App\Http\Controllers\RegistryController::class, 'show']);
-
-   Route::post('registry_detail',[App\Http\Controllers\RegistryDetailController::class, 'registry_detail']);
-
-   Route::resource("registros_mantenimiento", App\Http\Controllers\RegistryDetailController::class);
-   Route::post('registry_detailStore',[App\Http\Controllers\RegistryDetailController::class, 'store']);
-   Route::post('registry_detailEdit',[App\Http\Controllers\RegistryDetailController::class, 'edit']);
-   Route::post('registry_detailUpdate',[App\Http\Controllers\RegistryDetailController::class, 'update']);
-   Route::post('registry_detailDestroy',[App\Http\Controllers\RegistryDetailController::class, 'destroy']);
-   Route::post('registry_detailShow',[App\Http\Controllers\RegistryDetailController::class, 'show']);
-
-
-
-
-
-   Route::post('certificationStore',[App\Http\Controllers\CertificationController::class, 'store']);
-   Route::post('certificationEdit',[App\Http\Controllers\CertificationController::class, 'edit']);
-   Route::post('certificationUpdate',[App\Http\Controllers\CertificationController::class, 'update']);
-   Route::post('certificationDestroy',[App\Http\Controllers\CertificationController::class, 'destroy']);
-   Route::post('certificationShow',[App\Http\Controllers\CertificationController::class, 'show']);
-
-
-
-   //Route::get('certificationSavePhoto',[App\Http\Controllers\CertificationController::class, 'savePhoto']);
-
-  Route::post('certificaciones/certificationSavePhoto',[App\Http\Controllers\CertificationController::class, 'savePhoto']);
-
-
-
-   Route::resource("estudiantes", App\Http\Controllers\StudentController::class);
-   Route::post('studentStore',[App\Http\Controllers\StudentController::class, 'store']);
-   Route::post('studentEdit',[App\Http\Controllers\StudentController::class, 'edit']);
-   Route::post('studentUpdate',[App\Http\Controllers\StudentController::class, 'update']);
-   Route::post('studentDestroy',[App\Http\Controllers\StudentController::class, 'destroy']);
-   Route::post('studentShow',[App\Http\Controllers\StudentController::class, 'show']);
-
-// Route::get('qrcode', function () {
-//      return QrCode::size(300)->generate('https://certificados.socialdata-peru.com/');
-//  });
 
 });
 
@@ -233,17 +111,6 @@ Route::group(['middleware' => ['role:Administrador']], function () {
 //
 
 
-
-
-    Route::get('certificaciones/{registry_detail_id}/{language}/{id}',[App\Http\Controllers\CertificationController::class, 'report']);
-
-   Route::post('certificationGenerate',[App\Http\Controllers\RegistryDetailController::class, 'certificationGenerate']);
-    //  Route::post('certificationOpen',[App\Http\Controllers\RegistryDetailController::class, 'certificationGenerate']);
-
-    //obtener registry_detail_id para poder generar el certificado despuees
-         Route::resource("certificados-mantenimiento", App\Http\Controllers\CertificationController::class);
-
- Route::resource("certificados", App\Http\Controllers\CertificateController::class);
 
 
  Route::get('logout',[\App\Http\Controllers\Auth\LoginController::class, 'logout']);

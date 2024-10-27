@@ -24,11 +24,7 @@
                                 data-target="#exampleModal" onclick="New();$('#category')[0].reset();">
                                 Agregar
                             </button>
-                            <p></p>
-                            Buscar
-                            <form  name="for"id="show">
-                                <input type="text"name="show" class="form-control" style="width: 50%"  onkeydown="categoryShow();">
-                            </form>
+                           
 
                             <p></p>
                              <!-- /.content -->

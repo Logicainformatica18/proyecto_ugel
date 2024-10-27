@@ -15,16 +15,7 @@ class DatabaseSeeder extends Seeder
       $this->call(PermissionsSeeder::class);
       $this->call(CategorySeeder::class);
       $this->call(TypeSeeder::class);
-         $this->call(SurveySeeder::class);
-          
-                  $this->call(SelectionSeeder::class);
-                        $this->call(SelectionDetailSeeder::class);
-                          $this->call(SurveyDetailSeeder::class);
-    //  $this->call(CourseSeeder::class);
-    //  $this->call(ScheduleSeeder::class);
-     // $this->call(AssistantSeeder::class);
-    //  $this->call(RegistrySeeder::class);
-       //  $this->call(RegistryDetailSeeder::class);
-         //   $this->call(CertificationSeeder::class);
+      $this->call(PaySeeder::class);
+
     }
 }

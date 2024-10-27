@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/jpg" href="{{ asset('dist/img/favicon.png') }}" />
-    <title>AnthonyCode</title>
+    <title>Ugel</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -88,7 +88,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{ url('/') }}" class="nav-link">
-                        <img src="{{ asset('logo_anthonycode.png') }}" alt="Logo"
+                        <img src="{{ asset('logo_Ugel.png') }}" alt="Logo"
                             class="brand-image img-circle elevation-3"  width="50px">
                         <span class="brand-text font-weight-light"></span>
                     </a>
@@ -194,7 +194,7 @@
                         <h3><b>Anthony Code</b> </h3>
                         <p></p>
                         <p class="text-justify">
-                            AnthonyCode Encuestas hace más de 6 años nuestra organización inicio sus actividades en respuesta a
+                            Ugel Encuestas hace más de 6 años nuestra organización inicio sus actividades en respuesta a
                             las
                             necesidades de capacitación percibidas en áreas analíticas y ciencia de datos. Nuestros
                             programas, cursos y certificaciones de especialización se caracterizan por el método de
@@ -212,8 +212,8 @@
                         </p>
                         <span
                             style="background-image: linear-gradient(45deg, rgb(255, 0, 149), red); -webkit-background-clip: text; color: transparent;">
-                            <a href="https://anthonycode.com"target="_blank">Copyright © 2023 Dev.
-                                AnthonyCode</a></span>
+                            <a href="https://Ugel.com"target="_blank">Copyright © 2023 Dev.
+                                Ugel</a></span>
                     </div>
                     <div class="col-lg-4 text-center">
                         <p>
