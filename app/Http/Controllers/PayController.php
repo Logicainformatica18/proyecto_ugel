@@ -13,7 +13,8 @@ class PayController extends Controller
      */
     public function index()
     {
-        //
+        $pay = Pay::orderBy('id','DESC')->get();
+        return view("pay", compact("pay"));
     }
 
     /**

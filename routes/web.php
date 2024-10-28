@@ -24,16 +24,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/sistema', [App\Http\Controllers\HomeController::class, 'sistema'])->name('sistema');
 
-   
-   Route::get('reportes/{survey_id}',[App\Http\Controllers\ReportController::class, 'index']);
-
- 
-
-Route::get('encuesta/{survey_id}',[App\Http\Controllers\SurveyClientController::class, 'index']);
-
-
-
-
 
 
 

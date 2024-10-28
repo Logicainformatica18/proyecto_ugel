@@ -17,25 +17,44 @@
                                 <thead>
                                     <th ></th>
                                     <th class="sorting">ID</th>
+                                    <th class="sorting">Tipo</th>
+                                    <th class="sorting">Categoría</th>
                                     <th class="sorting">Descripción</th>
-                                    <th class="sorting">Detalle</th>
+                                    <th class="sorting">Plazo</th>
+                                    <th class="sorting">Money</th>
+                                    <th class="sorting">IGV</th>
+                                    <th class="sorting">Cantidad</th>
+                                    <th class="sorting">Subtotal</th>
+                                    <th class="sorting">Constancia</th>
+                                    <th class="sorting">Fecha Solicitud</th>
+                                    <th class="sorting">Fecha Recepción</th>
                                     <th ><img width="20" src="https://img1.freepng.es/20180622/aac/kisspng-computer-icons-download-share-icon-nut-vector-5b2d36055f5105.9823437615296896053904.jpg" alt="" srcset=""></th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($category as $categorys)
+                                    @foreach ($pay as $pays)
                                         <tr>
                                             <td></td>
-                                            <td>{{ $categorys->id }}</td>
-                                            <td>{{ $categorys->description }}</td>
-                                            <td>{{ $categorys->detail }}</td>
+                                            <td>{{ $pays->id }}</td>
+                                            <td>{{ $pays->type->description }}</td>
+                                            <td>{{ $pays->category->description }}</td>
+                                            <td>{{ $pays->description }}</td>
+                                            <td>{{ $pays->plazo }}</td>
+                                            <td>{{ $pays->money }}</td>
+                                            <td>{{ $pays->igv }}</td>
+                                            <td>{{ $pays->quantity }}</td>
+                                            <td>{{ $pays->money * $pays->quantity }}</td>
+                                            <td>{{ $pays->constancia }}</td>
+                                            <td>{{ $pays->date_solicitud }}</td>
+                                            <td>{{ $pays->date_recepcion }}</td>
+                                            
                                             <td>
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-success note-icon-pencil"
                                                     data-toggle="modal" data-target="#exampleModal"
-                                                    onclick="categoryEdit('{{ $categorys->id }}'); Up();  return false"></button>
+                                                    onclick="payEdit('{{ $pays->id }}'); Up();  return false"></button>
 
                                                 <!-- <button class="note-icon-pencil" ></button> -->
-                                                <button class="btn btn-danger note-icon-trash" onclick="categoryDestroy('{{ $categorys->id }}'); return false"></button>
+                                                <button class="btn btn-danger note-icon-trash" onclick="payDestroy('{{ $pays->id }}'); return false"></button>
                                             </td>
 
                                         </tr>
