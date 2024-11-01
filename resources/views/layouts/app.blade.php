@@ -88,7 +88,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{ url('/') }}" class="nav-link">
-                        <img src="{{ asset('logo_Ugel.png') }}" alt="Logo"
+                        <img src="{{ asset('logo_ugel.jpg') }}" alt="Logo"
                             class="brand-image img-circle elevation-3"  width="50px">
                         <span class="brand-text font-weight-light"></span>
                     </a>

@@ -101,7 +101,7 @@
 
 
                             <div class="login-logo">
-                                {{-- <img src="{{ asset('logo_Ugel.png') }}" alt="" srcset=""width="30%"> --}}
+                                <img src="{{ asset('logo_ugel.jpg') }}" alt="" srcset=""width="30%">
 
                                 <h1 style="font-weight: bold;font-size:50px; color: #042d89;"><b>Ugel</b>
                                 </h1>

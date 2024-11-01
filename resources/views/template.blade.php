@@ -130,7 +130,7 @@
             <a href="" class="brand-link">
                
                 <span class="brand-text font-weight-light center">
-  <img src="{{ asset('logo_ugel.png')}}" alt="AdminLTE Logo" class="" width="200px"                 style="">
+  <img src="{{ asset('logo_ugel.jpg')}}" alt="AdminLTE Logo" class="" width="200px"                 style="">
                 </span>
                 <p></p>
             </a>
