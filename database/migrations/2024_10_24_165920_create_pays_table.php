@@ -17,15 +17,17 @@ return new class extends Migration
             $table->foreign('type_id')->references('id')->on('types');
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->string('description');
-            $table->string('plazo');
-            $table->double('money');
-            $table->double('igv');
-            $table->integer('cantidad');
-            $table->date('date_solicitud');
-            $table->date('date_recepcion');
-            $table->string('constancia');
-            $table->string('ganador');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('description')->nullable();
+            $table->double('money')->nullable();
+            $table->string('type_money')->nullable();
+            $table->double('igv')->nullable();
+            $table->integer('cantidad')->nullable();
+            $table->date('date_solicitud')->nullable();
+            $table->date('date_recepcion')->nullable();
+            $table->string('constancia')->nullable();
+            $table->string('ganador')->nullable();
 
             $table->timestamps();
         });

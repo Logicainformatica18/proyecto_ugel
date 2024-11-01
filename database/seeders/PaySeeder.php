@@ -17,14 +17,14 @@ class PaySeeder extends Seeder
             'type_id' => '1',
             'category_id' => '1',
             'money' => '50.50',
-            'plazo' => '1',
             'igv' => '5',
             'cantidad' => '1',
             'date_solicitud' => '1994-03-08',
             'date_recepcion' => '1994-03-08',
-            'constancia' => '1',
-            'ganador' => '1',
-         
+            'constancia' => 'Sí',
+            'ganador' => 'NO',
+         "user_id" => 1,
+         "type_money" => 'SOLES',
         
         ]);
     }

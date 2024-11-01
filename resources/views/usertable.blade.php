@@ -26,7 +26,7 @@
                                     <th>Email</th>
                                     <th>Celular</th>
                                     <th>Descripción</th>
-                                    <th></th>
+                            
                                 </thead>
                                 <tbody>
                                     @foreach ($user as $users)

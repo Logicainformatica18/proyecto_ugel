@@ -13,9 +13,9 @@ class CategorySeeder extends Seeder
     public function run()
     {
 
-        Category::create(['description' => 'Data Science','detail' =>'']);
-        Category::create(['description' => 'Programación','detail' =>'']);
-        Category::create(['description' => 'Bases de datos','detail' =>'']);
+        Category::create(['description' => 'Balde de Pico','detail' =>'']);
+        Category::create(['description' => 'Balde','detail' =>'']);
+        Category::create(['description' => 'Martillo','detail' =>'']);
 
 
 

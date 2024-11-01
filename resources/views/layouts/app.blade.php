@@ -191,7 +191,7 @@
                             &nbsp;
                             &nbsp;
                         </p>
-                        <h3><b>Anthony Code</b> </h3>
+                        <h3><b>Ugel</b> </h3>
                         <p></p>
                         <p class="text-justify">
                             Ugel Encuestas hace más de 6 años nuestra organización inicio sus actividades en respuesta a

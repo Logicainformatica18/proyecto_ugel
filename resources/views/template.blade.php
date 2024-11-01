@@ -36,7 +36,7 @@
     <script src="{{ asset('user.js') }}"></script>
     <script src="{{ asset('role.js') }}"></script>
     <script src="{{ asset('type.js') }}"></script>
-
+    <script src="{{ asset('pay.js') }}"></script>
 
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -107,7 +107,7 @@
                 <div class="col col-lg-7">
 
                     <a class="navbar-brand" href="{{ url('Administrador') }}">
-                   Anthony Code    
+                   Ugel    
                     </a>
 
                 </div>
@@ -130,7 +130,7 @@
             <a href="" class="brand-link">
                
                 <span class="brand-text font-weight-light center">
-  <img src="{{ asset('logo_Ugel.png')}}" alt="AdminLTE Logo" class="" width="200px"                 style="">
+  <img src="{{ asset('logo_ugel.png')}}" alt="AdminLTE Logo" class="" width="200px"                 style="">
                 </span>
                 <p></p>
             </a>
@@ -763,7 +763,7 @@
            <footer class="main-footer">
                 <span
                     style="background-image: linear-gradient(45deg, rgb(255, 0, 149), red); -webkit-background-clip: text; color: transparent;">
-                  <a href="https://Ugel.com"target="_blank">Copyright © 2023 Dev. Ugel</a></span>
+                  <a href="https://Ugel.com"target="_blank">Copyright © 2024 Dev. Ugel</a></span>
                 <div class="float-right d-none d-sm-inline-block">
                 </div>
             </footer>
