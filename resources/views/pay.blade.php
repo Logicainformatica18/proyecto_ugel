@@ -23,7 +23,54 @@
         Agregar
     </button>
     <p></p>
+<div class="row">
+    <div class="col-4">
+        Usuario :
+        <select name="user_option_1" id="user_option_1" class="form-control">
+            @foreach ($user as $item)
+                <option value="{{ $item->id }}">
+                    {{ $item->email }} -- {{ $item->firstname }} {{ $item->lastname }}
+                    {{ $item->names }} </option>
+            @endforeach
+        </select>
 
+    </div>
+    <div class="col-4">
+        Usuario :
+        <select name="user_option_2" id="user_option_2" class="form-control">
+            @foreach ($user as $item)
+                <option value="{{ $item->id }}">
+                    {{ $item->email }} -- {{ $item->firstname }} {{ $item->lastname }}
+                    {{ $item->names }} </option>
+            @endforeach
+        </select>
+
+    </div>
+    <div class="col-4">
+        Usuario :
+        <select name="user_option_3" id="user_option_3" class="form-control">
+            @foreach ($user as $item)
+                <option value="{{ $item->id }}">
+                    {{ $item->email }} -- {{ $item->firstname }} {{ $item->lastname }}
+                    {{ $item->names }} </option>
+            @endforeach
+        </select>
+
+    </div>
+    <div class="col-6">
+        Fecha Solicitud Inicio :
+        <input class="form-control" type="date" name="date_start"id="date_start">
+    </div>
+    <div class="col-6">
+        Fecha solicitud Fin :
+        <input class="form-control" type="date" name="date_end"id="date_end">
+    </div>
+</div>
+
+    <p></p>
+    <button type="button" class="btn btn-success"onclick="payCompare()">
+        Comparar
+    </button>
     <p></p>
     <!-- /.content -->
     {{-- {{ $pay->onEachSide(5)->links() }} --}}
@@ -49,7 +96,7 @@
                         {{ csrf_field() }}
                         Descripción : <input type="text" name="description" id="description" class="form-control">
                         <p></p>
-                        Usario :
+                        Usuario :
                         <select name="user_id" id="user_id" class="form-control">
                             @foreach ($user as $item)
                                 <option value="{{ $item->id }}">

@@ -29,7 +29,18 @@ class PayController extends Controller
         $pay = Pay::orderBy('id','DESC')->get();
         return view("paytable", compact("pay"));
     }
+    public function compare(Request $request)
+    {
+        $pay = Pay::where(function($query) use ($request) {
+            $query->where("user_id", $request->user_option_1)
+                  ->orWhere("user_id", $request->user_option_2)
+                  ->orWhere("user_id", $request->user_option_3);
+        })
+        ->whereBetween("date_solicitud", [$request->date_start, $request->date_end])
+        ->get();
 
+        return view("paytable", compact("pay"));
+    }
     /**
      * Store a newly created resource in storage.
      */

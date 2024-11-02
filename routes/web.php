@@ -86,7 +86,7 @@ Route::group(['middleware' => ['role:Administrador']], function () {
    Route::post('payEdit',[App\Http\Controllers\PayController::class, 'edit']);
    Route::post('payUpdate',[App\Http\Controllers\PayController::class, 'update']);
    Route::post('payDestroy',[App\Http\Controllers\PayController::class, 'destroy']);
-
+   Route::post('payCompare',[App\Http\Controllers\PayController::class, 'compare']);
 
 
 

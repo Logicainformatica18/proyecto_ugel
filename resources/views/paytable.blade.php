@@ -19,10 +19,12 @@
                                     <th ><img width="20" src="https://img1.freepng.es/20180622/aac/kisspng-computer-icons-download-share-icon-nut-vector-5b2d36055f5105.9823437615296896053904.jpg" alt="" srcset=""></th>
                                     <th class="sorting">ID</th>
                                     <th class="sorting">Usuario</th>
+                                    <th class="sorting">Email</th>
+                                    <th class="sorting">Ganador</th>
                                     <th class="sorting">Plazo</th>
                                     <th class="sorting">Categoría</th>
                                     <th class="sorting">Descripción</th>
-                                   
+                                    <th class="sorting">Tipo Moneda</th>
                                     <th class="sorting">Money</th>
                                     <th class="sorting">IGV</th>
                                     <th class="sorting">Cantidad</th>
@@ -47,10 +49,12 @@
                                             </td>
                                             <td>{{ $pays->id }}</td>
                                             <td>{{ $pays->user->firstname }} {{ $pays->user->lastname }} {{ $pays->user->names }}</td>
+                                            <td>{{ $pays->user->email }}</td>
+                                            <td>{{ $pays->ganador }}</td>
                                             <td>{{ $pays->type->description }}</td>
                                             <td>{{ $pays->category->description }}</td>
                                             <td>{{ $pays->description }}</td>
-                                          
+                                            <td>{{ $pays->type_money }}</td>
                                             <td>{{ $pays->money }}</td>
                                             <td>{{ $pays->igv }}</td>
                                             <td>{{ $pays->cantidad }}</td>
