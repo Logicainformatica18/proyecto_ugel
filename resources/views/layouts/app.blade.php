@@ -142,40 +142,9 @@
         <!-- Coloca este script donde quieras que aparezca el botón -->
         <!-- Asegúrate de tener cargada la hoja de estilos de Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <style>
-            /* Estilos para el botón flotante de WhatsApp */
-            .whatsapp-btn {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background-color: #25d366;
-                /* Color de fondo del botón */
-                border-radius: 50%;
-                /* Hace que el botón tenga forma circular */
-                width: 60px;
-                height: 60px;
-                text-align: center;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            }
+    
 
-            .whatsapp-btn a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                line-height: 60px;
-                color: #fff;
-                /* Color del ícono */
-                font-size: 40px;
-            }
-        </style>
-
-        <!-- Botón flotante de WhatsApp -->
-        <div class="whatsapp-btn">
-            <a href="https://api.whatsapp.com/send/?phone=51939929383&text=Buen+día+SDC+me+gustaria+recibir+información+sobre+los+Cursos+y+Certificaciones+que+disponga.+Gracias"
-                target="_blank" title="Enviar mensaje por WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
+       
 
         <br>
 

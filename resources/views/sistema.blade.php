@@ -111,9 +111,7 @@
                                     <li class="list-group-item">
                                         <b>DNI</b> <a class="float-right">{{ $users->dni }}</a>
                                     </li>
-                                    <li class="list-group-item">
-                                        <b>ID de estudiante</b> <a class="float-right">2023SDC00{{ $users->id }}</a>
-                                    </li>
+                               
 
 
 
@@ -179,7 +177,7 @@
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item">
                                         <b>Cargo</b>
-                                        <a class="float-right">Estudiante</a>
+                                        <a class="float-right">Adminsitrador</a>
                                     </li>
                                     <li class="list-group-item">
                                         <b>Experiencia</b> <a class="float-right">{{ $users->datebirth }}</a>
