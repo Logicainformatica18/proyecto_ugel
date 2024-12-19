@@ -14,7 +14,7 @@ function typeStore() {
             var contentdiv = document.getElementById("mycontent");
             contentdiv.innerHTML = response.data;
                  //carga pdf- csv - excel
-                 datatable_load();
+               datatable_load();
                  alert('Registrado Correctamente');
 
         })

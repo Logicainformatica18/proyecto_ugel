@@ -39,8 +39,8 @@ class TypeController extends Controller
         $type = new Type;
         $type->description = $request->description;
         $type->detail = $request->detail;
-        $type->save();
-        return $this->create();
+      $type->save();
+       return $this->create();
     }
 
     /**

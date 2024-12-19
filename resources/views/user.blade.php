@@ -58,7 +58,7 @@
                         Email<input type="text" name="email" class="form-control">
                         Descripción<input type="text" name="description" class="form-control">
                         Ruc<input type="number" name="ruc" class="form-control">
-                        {{-- Contraseña<input type="password" name="password" class="form-control"> --}}
+                        Contraseña<input type="password" name="password" class="form-control">
                         {{-- Sexo
                         <div class="container">
                             <div class="row ">

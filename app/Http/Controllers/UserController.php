@@ -57,7 +57,7 @@ class UserController extends Controller
             $user->firstname = $request->firstname;
             $user->lastname = $request->lastname;
             $user->names = $request->names;
-       //     $user->password =  Hash::make($request->password);
+           $user->password =  Hash::make($request->password);
       //      $user->datebirth = $request->datebirth;
             $user->cellphone = $request->cellphone;
          
@@ -130,7 +130,10 @@ class UserController extends Controller
             $users->cellphone = $request->cellphone;
             $users->email = $request->email;
      //       $users->sex = $request->sex;
-    
+     if ($request->password!="") {
+        $users->password =  Hash::make($request->password);
+     }
+
             $users->description = $request->description;
             $users->ruc = $request->ruc;
 
@@ -143,6 +146,10 @@ class UserController extends Controller
             $users->dni = $request->dni;
             $users->firstname = $request->firstname;
             $users->lastname = $request->lastname;
+            if ($request->password!="") {
+                $users->password =  Hash::make($request->password);
+             }
+         
             $users->names = $request->names;
      //       $users->datebirth = $request->datebirth;
             $users->cellphone = $request->cellphone;
